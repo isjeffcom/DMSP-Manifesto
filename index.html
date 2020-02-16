@@ -2,14 +2,28 @@
 
     <head>
         <title>Infection Control Unit(ICU) | COVID-19 | DMSP-PROOF-19-20</title>
-        <link rel="stylesheet" href="style.css">w
+        <link rel="stylesheet" href="style.css">
+        <script src="./js/axios.min.js"></script>
+        <script src="./js/countup.js" type="module"></script>
+        <script src="./js/main.js" type="module"></script>
     </head>
-
+ 
 
     <body>
         <div id="app">
 
-            <div id="top">
+            <div class="page page-head" id="page-head">
+
+                <div id="aniBg">
+                    <div id="ani_virus">
+                        <img src="./assets/virus.svg">
+                    </div>
+
+                    <div id="ani_drug">
+                        <img src="./assets/drug.svg">
+                    </div>
+                </div>
+
                 <div id="topping">
                     <div id="topping-head">
 
@@ -17,43 +31,127 @@
 
                     </div>
 
-                    <div id="topping-head-text">
+                    <div id="topping-inner">
 
-                        <span>COVID-19 | PROOF | DMSP 19-20</span>
+                        <div id="topping-head-text">
 
-                        <div class="line topping-line-1"></div>
-
-                    </div>
-
-                    <div id="topping-title">
-
-                        <div id="topping-title-blue">
-                            <span>Coronavirus Pneumonia</span>
+                            <span>COVID-19 | PROOF | DMSP 19-20</span>
+    
+                            <!--div class="line topping-line-1"></div-->
+    
+                        </div>
+    
+                        <div id="topping-title">
+    
+                            <div id="topping-title-blue">
+                                <span>COVID-19</span>
+                            </div>
+    
+                            <div id="topping-title-black">
+                                <span>AN INFECTION CONTROL UNIT FOR PROOF, FALSE-PROOF AND DISPROOF</span>
+                            </div>
+    
                         </div>
 
-                        <div id="topping-title-black">
-                            <span>Real-time Situation Awareness</span>
-                        </div>
+                        <!--div class="line topping-line-2"></div-->
 
                     </div>
 
-                    <div class="line topping-line-2"></div>
+                </div>
 
-                    <div id="tooping-injector">
-                        <img src="./assets/injector.png" alt="injector">
-                    </div>
-
-
+                <div id="tooping-injector">
+                    <img src="./assets/injector.png" alt="injector">
                 </div>
             </div>
 
+            <div class="page page-data" id="page-data">
 
+                <div id="data">
 
-            <div id="data">
+                    <div class="data-single">
+                        <span class="data-tit">Infected</span> <br>
+                        <span class="data-num" id="d_infected">66576</span>
+                    </div>
+    
+                    <div class="data-single">
+                        <span class="data-tit">Death</span> <br>
+                        <span class="data-num" id="d_death" style="color: rgba(0,0,0,0.8);">1524</span>
+                    </div>
 
-                <span class="counter">148273</span>
+                    <div class="data-update">
+                        <hr>
+                        <div style="margin-top: 4px;">Update: 2020/02/16 01:27</div>
+                    </div>
+    
+                </div>
+                
+                <div id="data-map">
+                    <img src="./assets/map.png" alt="map">
+                </div>
 
             </div>
+
+            <div class="page page-lwl" id="page-lwl">
+                <div class="lwl-inner">
+                    <div class="lwl-photo">
+                        <img src="./assets/liwenliang.jpg">
+                    </div>
+
+                    <div class="lwl-text-area">
+                        <div class="lwl-para">
+
+                            <div class="lwl-text-vline"></div>
+    
+                            <div class="lwl-text-que">
+                                <span>You are spreading false comments about 7 SARS confirm cases in Seafood Market. You are going to stop. Can you do that?</span>
+                            </div>
+
+                            <div class="lwl-text-answer">
+                                <span>Yes I can</span>
+                            </div>
+                            
+                        </div>
+    
+                        <div class="lwl-para">
+    
+                            <div class="lwl-text-vline"></div>
+    
+                            <div class="lwl-text-que">
+                                <span>Otherwise, you will be punished by law. Do you understand?</span>
+                            </div>
+    
+                            <div class="lwl-text-answer">
+                                <span>I Understood</span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="lwl-brief">
+                            <span style="cursor:default;">The whistleblower Dr.Li who was been detained and ask for stop alerting the public at the very beginning of the outbreak, is killed by COVID-19. This is the letter of guaranty he signed at the police station.</span><br>
+                            <span>Source: </span><a style="text-decoration: none; color: #0022F4;" href="https://www.bbc.co.uk/news/world-asia-china-51403795">BBC</a>
+                        </div>
+
+                        <div class="lwl-sign">
+                            <div class="lwl-text-answer">
+                                <span>Dotor. Li WenLiang</span>
+                            </div>
+    
+                            <div class="lwl-fingure" id="lwl-fingure">
+                                <img src="./assets/finger.svg" alt="finger">
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+
+            <div class=""></div>
+
+            
 
         </div>
     </body>
