@@ -112,6 +112,7 @@ span{
 
 button{
     border-radius: 100px;
+    border:none;
     font-size: 22px;
     font-weight: bold;
     color: #ffffff;
