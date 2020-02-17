@@ -94,14 +94,12 @@ window.addEventListener('wheel', function(e) {
       if(thisY > 0){
         console.log("next")
         thisY = 0
-        locked = true
         switchPage(1)
       }
   
       else if(thisY < 0){
         console.log("last")
         thisY = 0
-        locked = true
         switchPage(-1)
       }
 
@@ -117,14 +115,20 @@ document.querySelector('#page-msg').addEventListener('click', ()=>{
   }
 })
 
-document.querySelector('.toNext').addEventListener('click', ()=>{
-  if(locked){
-    slowdown()
-  } else {
-    switchPage(1)
-  }
-  
-})
+const allToNext = document.getElementsByClassName('toNext')
+for (var i = 0; i < allToNext.length; i++) {
+  allToNext[i].addEventListener('click', ()=>{
+    if(locked){
+      //slowdown()
+      return
+    } else {
+      switchPage(1)
+    }
+    
+  })
+}
+
+
 
 document.querySelector('#qask-1').addEventListener('click', showAns)
 document.querySelector('#qask-2').addEventListener('click', showAns)
@@ -210,9 +214,8 @@ function playmusic(bol){
 
 function switchPage(to){
 
-  setTimeout(()=>{
-    locked = false
-  }, 2000)
+  locked = true
+
 
   if(currentPage == 0 && to == -1){
     console.log("no last")
@@ -225,6 +228,10 @@ function switchPage(to){
   }
 
   toPage(currentPage + to)
+
+  setTimeout(()=>{
+    locked = false
+  }, 2000)
   
 }
 
@@ -508,10 +515,10 @@ function showAlert(){
   
 }
 
-function slowdown(){
+/*function slowdown(){
   document.getElementById('slowdown').style.display = "block"
   document.getElementById('slowdown').style.animationName = "slowdown"
-}
+}*/
 
 
 

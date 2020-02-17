@@ -369,6 +369,7 @@ button:focus{
     margin-left: auto;
     margin-right: auto;
     bottom: 30px;
+    cursor: pointer;
     animation-name: inject;
     animation-duration: 1.3s;
     animation-delay: 2s;
@@ -491,7 +492,7 @@ button:focus{
 
 .lwl-brief{
     position: absolute;
-    bottom: 0px;
+    bottom: 30px;
     opacity: 0.5;
     font-size: 12px;
     transition: all .42s cubic-bezier(.25,.8,.25,1);
