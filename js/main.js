@@ -237,6 +237,7 @@ function toPage(id, hardSwitch){
 
   if(id == 1){
     getData(cacheApi)
+    getData(sinaApi)
   }
 
   if(id == 2){
@@ -322,6 +323,8 @@ function getData (api) {
     datas.d_infected = res.gntotal
     datas.d_death = res.deathtotal
 
+    document.getElementById("data-update-date").innerHTML = "Update: " + res.mtime
+
     for(let i=0;i<datasKey.length;i++){
       var countUp = new CountUp(datasKey[i], datas[datasKey[i]]);
       countUp.start();
@@ -356,7 +359,7 @@ function tPop(container, count, id){
   var value = lwlWord[count%lwlWord.length].v
   console.log(count)
 
-  n.innerHTML='<div class="twitter-content"><div class="twitter-head">' + author + '</div><div>' + value + '</div></div>'
+  n.innerHTML='<div class="twitter-content"><div class="twitter-head">@' + author + '</div><div>' + value + '</div></div>'
 
   var created = container.appendChild(n)
 
