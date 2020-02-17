@@ -3,7 +3,7 @@ import { CountUp } from './countup.js';
 //const axios = require('./axios.min.js');
 
 const cacheApi = './cache/data.json'
-const sinaApi = 'http://interface.sina.cn/news/wap/fymap2020_data.d.json'
+const sinaApi = 'https://interface.sina.cn/news/wap/fymap2020_data.d.json'
 
 
 var locked = false
