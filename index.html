@@ -3,6 +3,7 @@
     <head>
         <title>Infection Control Unit(ICU) | COVID-19 | DMSP-PROOF-19-20</title>
         <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
         <script src="./js/axios.min.js"></script>
         <script src="./js/countup.js" type="module"></script>
         <script src="./js/main.js" type="module"></script>
@@ -12,16 +13,33 @@
     <body>
         <div id="app">
 
+            <div id="music">
+                <img src="./assets/music.svg" alt="play music">
+            </div>
+
+            <audio id="bgm">
+                <source id="bgm-s" src="./assets/sound/vivian.wav" type="audio/wav">
+            </audio>
+
             <div class="page page-head" id="page-head">
 
                 <div id="aniBg">
-                    <div id="ani_virus">
+                    <div class="ani_obj bounce" id="ani_virus">
                         <img src="./assets/virus.svg">
                     </div>
 
-                    <div id="ani_drug">
+                    <div class="ani_obj bounce2" id="ani_drug">
                         <img src="./assets/drug.svg">
                     </div>
+
+                    <div class="ani_obj bounce3" id="ani_twitter">
+                        <img src="./assets/twitter.svg">
+                    </div>
+
+                    <div class="ani_obj bounce2" id="ani_scope">
+                        <img src="./assets/micro_scope.svg">
+                    </div>
+                    
                 </div>
 
                 <div id="topping">
@@ -59,7 +77,7 @@
 
                 </div>
 
-                <div id="tooping-injector">
+                <div id="topping-injector" class="toNext">
                     <img src="./assets/injector.png" alt="injector">
                 </div>
             </div>
@@ -92,12 +110,17 @@
             </div>
 
             <div class="page page-lwl" id="page-lwl">
-                <div class="lwl-inner">
+                <div class="inner lwl-inner">
                     <div class="lwl-photo">
                         <img src="./assets/liwenliang.jpg">
                     </div>
 
                     <div class="lwl-text-area">
+
+                        <div class="lwl-tit">
+                            <span class="title-text" style="text-decoration: line-through;">A Teller</span>
+                        </div>
+
                         <div class="lwl-para">
 
                             <div class="lwl-text-vline"></div>
@@ -149,10 +172,239 @@
                 
             </div>
 
-            <div class=""></div>
+            <div class="page page-twitter" id="page-twitter">
+                <div class="inner twitter-inner">
+
+                    <div class="twitter-des">
+                        <div class="title-text-1 twitter-des">
+                            <span>And More Teller?</span>
+                            
+                        </div>
+                        
+                        <div class="title-text-4 twitter-des">
+                            <span>be crowned by the crowd</span>
+                        </div>
+
+                    </div>
+
+                    <div class="twitter-wall" id="twitter-wall-1">
+
+                        <div class="twitter-single">
+                            <div class="twitter-content">
+                                <div class="twitter-head">@Tommy</div>
+                                <div>I pray for Dr.Li, for his bravery.</div>
+                            </div>
+                        </div>
+
+                        <div class="twitter-single">
+                            <div class="twitter-content">
+                                <div class="twitter-head">@Tommy</div>
+                                <div>I pray for Dr.Li, for his bravery.</div>
+                            </div>
+                        </div>
+
+                        <div class="twitter-single">
+                            <div class="twitter-content">
+                                <div class="twitter-head">@Tommy</div>
+                                <div>I pray for Dr.Li, for his bravery.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="twitter-wall twitter-wall-2" id="twitter-wall-2">
+
+                        <div class="twitter-single">
+                            <div class="twitter-content">
+                                <div class="twitter-head">@Tommy</div>
+                                <div>I pray for Dr.Li, for his bravery.</div>
+                            </div>
+                        </div>
+
+                        <div class="twitter-single">
+                            <div class="twitter-content">
+                                <div class="twitter-head">@Tommy</div>
+                                <div>I pray for Dr.Li, for his bravery.</div>
+                            </div>
+                        </div>
+
+                        <div class="twitter-single">
+                            <div class="twitter-content">
+                                <div class="twitter-head">@Tommy</div>
+                                <div>I pray for Dr.Li, for his bravery.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+
+            <div class="page page-msg" id="page-msg">
+
+                <div class="inner msg-inner">
+                    <div class="msg-input">
+                        <input type="text" placeholder="I came from Wuhan City" disabled>
+                        <div class="input-flashing">|</div>
+                    </div>
+
+                    <div class="msg-submit">
+                        <button id="msg-submit-btn">Tweet</button>
+                    </div>
+                </div>
+
+                <div class="msg-msgs" id="msg-msgs"></div>
+
+            </div>
+
+            <div class="page page-fake" id="page-fake">
+
+                <div class="inner fake-inner">
+                    <div class="fake-beer">
+                        <div class="fake-beer-img">
+                            <img src="./assets/beer.jpg" alt="corona beer">
+                        </div>
+
+                        <div class="fake-beer-text">
+                            
+                            <div class="title-text-1">" Beer coronavirus "</div>
+                            <div class="title-text-4">The fake news never dead</div>
+
+                        </div>
+
+                        
+                    </div>
+
+                    
+                </div>
+
+                <div class="lwl-brief" style="width: 100%; text-align: center; bottom: 30px;">
+                    <hr>
+                    <span style="cursor:default;">The deadly virus has nothing to do with Mexican alcoholic beverages, however this misinformation were gone widely.</span><br>
+                    <span>Source: </span><a style="text-decoration: none; color: #0022F4;" href="https://www.theguardian.com/commentisfree/2020/feb/08/misinformation-coronavirus-contagious-infections">The Guardian</a>
+                </div>
+
+
+            </div>
+
+
+            <div class="page page-question" id="page-question">
+                <div class="inner question-inner">
+                    <div class="question-que">
+                        <div class="title-text-1">Does the truth need to be proven, or is the truth proof itself</div>
+                    </div>
+
+                    <div class="question-ask">
+                        <button id="qask-1">The Truth Need To Be Proof</button>
+                        <button id="qask-2">The Truth Proof Itself</button>
+                    </div>
+                </div>
+
+                <div class="question-ans" id="question-ans">
+                    <div class="inner" id="question-and-inner">
+                        <div class="title-text-1">We don't know</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="page page-video" id="page-video">
+                <div class="inner video-inner">
+                    <div class="video-vid">
+                        <iframe src="https://www.youtube.com/embed/g6_bN_brxps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" rel="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="video-arrow" id="video-arrow">
+                    <img src="./assets/arrow.svg">
+                </div>
+            </div>
+
+            <div class="page page-flyer" id="page-flyer">
+                <div class="inner flyer-inner">
+                    <div class="flyer-img">
+                        <img src="./assets/flyer.jpg">
+                    </div>
+
+                    <div class="flyer-teams">
+                        <div class="flayer-teams-s flyer-teams-1">
+                            <img src="./assets/team-1.png">
+                        </div>
+
+                        <div class="flayer-teams-s flyer-teams-2">
+                            <img src="./assets/team-2.png">
+                        </div>
+
+                        <div class="flayer-teams-s flyer-teams-3">
+                            <img src="./assets/team-3.png">
+                        </div>
+                    </div>
+
+                    <div class="flyer-alert" id="flyer-alert">
+                        <div class="title-text-1" id="flyer-alert-text">Don't let the virus run away.</div>
+                        <div class="title-text-4" style="color: #fbf955; opacity: 1;">感染控制单元</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-ending" id="page-ending">
+                <div class="inner ending-inner">
+                    <div class="ending-words">
+                        <div class="ending-team">
+                            <img src="./assets/team-all.png" alt="team member with ai face express detection mark">
+                        </div>
+    
+                        <div class="ending-text">
+                            <div class="title-text-1">Proof - Manifesto - End</div>
+                            <div class="title-text-4">Does the truth need to be proven? Or is the truth proof itself.</div>
+
+                            <div class="ending-buttons">
+                                <a href="https://dmsp.digital.eca.ed.ac.uk/blog/proof2020/files/2020/02/submission1_words_fileb.pdf" target="_blank">
+                                    <button>Overview</button>
+                                </a>
+
+                                <br>
+                                <br>
+
+                                <a href="https://dmsp.digital.eca.ed.ac.uk/blog/proof2020/files/2020/02/subminssion1_words_filec.pdf" target="_blank">
+                                    <button>Plan</button>
+                                </a>
+
+                                <br>
+                                <br>
+
+                                <a href="https://dmsp.digital.eca.ed.ac.uk/blog/proof2020/files/2020/02/submission1_words_filea.pdf" target="_blank">
+                                    <button>Research</button>
+                                </a>
+
+                                <br>
+                                <br>
+
+                                <a href="https://dmsp.digital.eca.ed.ac.uk/blog/proof2020/" target="_blank">
+                                    <button>Blog</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    
+                </div>
+            </div>
 
             
 
+        </div>
+
+
+        <div id="slowdown">
+            <div id="slowdown-inner">
+                <span>Too quick, relax</span>
+            </div>
+           
         </div>
     </body>
 
