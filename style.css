@@ -598,6 +598,7 @@ button:focus{
     font-size: 66px;
     border: none;
     font-weight: bold;
+    background: #fff;
 }
 
 .input-flashing{
